@@ -36,7 +36,7 @@ public class SchoolsController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public Response deleteSchoolseById(@PathVariable("id") String id) throws CloneNotSupportedException {
+    public Response deleteSchoolsById(@PathVariable("id") String id) throws CloneNotSupportedException {
         Response response = new Response();
 
         Optional<SchoolsDTO> schoolsDTO = SchoolsRepo.schoolsDTOS.stream().filter(schoolsDTO1 -> Objects.equals(String.valueOf(schoolsDTO1.getId()), id)).findFirst();
